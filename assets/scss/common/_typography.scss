@@ -1,0 +1,29 @@
+@use "../presets" as *;
+@use "../mixins" as *;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+body {
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+}
+
+h2 {
+}
+
+h3 {
+}
