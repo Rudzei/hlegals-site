@@ -165,6 +165,31 @@ template {
 [hidden] {
   display: none;
 }
+
+@font-face {
+  font-family: "TT Norms";
+  font-weight: bold;
+  font-style: normal;
+
+  src: url("TTNorms-Bold.eot");
+  src: local("TT Norms Bold"), local("TTNorms-Bold"), url("TTNorms-Bold.eot?#iefix") format("embedded-opentype"), url("TTNorms-Bold.woff2") format("woff2"), url("TTNorms-Bold.woff") format("woff"), url("TTNorms-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "TT Norms";
+  font-weight: 500;
+  font-style: normal;
+
+  src: url("TTNorms-Medium.eot");
+  src: local("TT Norms Medium"), local("TTNorms-Medium"), url("TTNorms-Medium.eot?#iefix") format("embedded-opentype"), url("TTNorms-Medium.woff2") format("woff2"), url("TTNorms-Medium.woff") format("woff"), url("TTNorms-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "TT Norms";
+  font-weight: normal;
+  font-style: normal;
+
+  src: url("TTNorms-Regular.eot");
+  src: local("TT Norms Regular"), local("TTNorms-Regular"), url("TTNorms-Regular.eot?#iefix") format("embedded-opentype"), url("TTNorms-Regular.woff2") format("woff2"), url("TTNorms-Regular.woff") format("woff"), url("TTNorms-Regular.ttf") format("truetype");
+}
 *,
 *::before,
 *::after {
@@ -175,6 +200,9 @@ template {
 html {
   overflow-x: hidden;
   overflow-y: scroll;
+
+  font-family: "TT Norms", sans-serif;
+  font-size: 16px;
 }
 
 a {
