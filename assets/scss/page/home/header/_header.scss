@@ -1,0 +1,61 @@
+@use "../../../presets" as *;
+
+.page-header {
+  position: relative;
+
+  &::before {
+    content: "";
+    background-image: url(../img/Frame2.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50% 100%;
+    position: absolute;
+  }
+
+  &__grid {
+    position: absolute;
+
+    // display: none;
+  }
+
+  &__logo {
+  }
+
+  &__menu {
+  }
+
+  &__actions {
+  }
+
+  &__content {
+    min-height: 100vh;
+    background-color: $color-primary;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &-title {
+      position: absolute;
+      margin: 0;
+      font-size: 38px;
+      text-align: center;
+
+      color: $color-white;
+      max-width: 670px;
+      padding: $gap;
+      z-index: 1;
+    }
+
+    &-image {
+      transform: translateY(30%);
+    }
+  }
+
+  &__button {
+    position: absolute;
+
+    //todo: показать
+    display: none;
+  }
+
+}
