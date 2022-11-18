@@ -4,22 +4,27 @@
 .page-header {
   position: relative;
   background: $color-gradient-soft;
-  &::before {
-    content: "";
-    background-image: url(../img/Frame2.svg);
-    background-size: 88vh;
-    background-repeat: no-repeat;
-    background-position: 50% 100%;
-    @include abs-position;
+  // разрбраться с меню
+  // max-width: 100%;
+  // overflow-x: hidden;
+  min-height: 800px;
+  @include md-min {
+    &::before {
+      content: "";
+      background-image: url(../img/Frame2.svg);
+      background-repeat: no-repeat;
+      background-position: center 98%;
+      @include abs-position;
+    }
   }
   &::after {
     content: "";
     background: linear-gradient(to top, $color-primary 0%, transparent 100%);
-    @include abs-position(70%);
+    @include abs-position(70%)
   }
   &__grid {
     position: absolute;
-    z-index: 2;
+    z-index: 9;
     top: 0;
     left: 0;
     right: 0;
@@ -64,15 +69,22 @@
       padding: $gap;
 
       font-weight: 500;
+
+      margin-top: 270px;
     }
     &-image {
       position: absolute;
-      height: 64vh;
-      bottom: 0;
-      max-width: 100%;
+      height: 500px;
+      top: 56%;
     }
   }
   &__button {
     position: absolute;
+    z-index: 3;
+    top: 92%;
+    right: 0;
+    left: 0;
+
+    text-align: center;
   }
 }
