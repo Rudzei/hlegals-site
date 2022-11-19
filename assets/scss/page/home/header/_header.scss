@@ -70,12 +70,13 @@
 
       font-weight: 500;
 
-      margin-top: 270px;
+      margin-top: 250px;
     }
     &-image {
       position: absolute;
       height: 500px;
       top: 56%;
+      max-width: 100%;
     }
   }
   &__button {
