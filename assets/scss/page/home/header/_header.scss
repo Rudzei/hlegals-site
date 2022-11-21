@@ -4,16 +4,16 @@
 .page-header {
   position: relative;
   background: $color-gradient-soft;
-  // разрбраться с меню
-  // max-width: 100%;
-  // overflow-x: hidden;
-  min-height: 800px;
+  max-width: 100%;
+  // overflow-x: visible;
+
   @include md-min {
     &::before {
       content: "";
       background-image: url(../img/Frame2.svg);
+      background-size: 85vh;
       background-repeat: no-repeat;
-      background-position: center 98%;
+      background-position: center 100%;
       @include abs-position;
     }
   }
@@ -24,7 +24,7 @@
   }
   &__grid {
     position: absolute;
-    z-index: 9;
+    z-index: 3;
     top: 0;
     left: 0;
     right: 0;
@@ -69,19 +69,21 @@
       padding: $gap;
 
       font-weight: 500;
-
-      margin-top: 250px;
     }
     &-image {
       position: absolute;
-      height: 500px;
-      top: 56%;
-      max-width: 100%;
+      bottom: 0;
+      @include md-min {
+        height: 63vh;
+      }
+      @include md {
+        height: 67vh;
+      }
     }
   }
   &__button {
     position: absolute;
-    z-index: 3;
+    z-index: 4;
     top: 92%;
     right: 0;
     left: 0;

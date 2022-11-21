@@ -1,0 +1,69 @@
+@use "../../../presets" as *;
+@use "../../../mixins" as *;
+
+.services {
+  position: relative;
+  background: $color-gradient-supersoft;
+  border-radius: 0px 0px 12px 12px;
+
+  margin-bottom: 60px;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    right: 40px;
+    left: 40px;
+    height: 20px;
+    border-radius: 0px 0px 12px 12px;
+    background-color: $color-gray-separator;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    right: 20px;
+    left: 20px;
+    height: 10px;
+    border-radius: 0px 0px 12px 12px;
+    background-color: $color-gray-text;
+  }
+  &__container {
+    @extend %container;
+  }
+  @include xs {
+    margin-bottom: 40px;
+  }
+  &__page-link {
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: $color-white;
+  opacity: 0.5;
+  }
+  &__title {
+    font-size: 42px;
+    @extend %text-liner-gradient2;
+
+    margin-bottom: 68px;
+    @include sm {
+      font-size: 32px;
+
+      margin-bottom: 20px;
+    }
+  }
+  &__grid {
+    display: grid;
+
+    padding-bottom: 76px;
+    gap: 58px 54px;
+    @include md-min {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+    @include md-xs {
+      grid-template-columns: 1fr 1fr;
+    }
+    @include xs {
+      gap: $gap-xl $gap-xl;
+    }
+  }
+}
