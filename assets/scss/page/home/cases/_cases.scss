@@ -1,0 +1,100 @@
+@use "../../../presets" as *;
+@use "../../../mixins" as *;
+
+.cases {
+  &__container {
+    padding-bottom: 30px;
+    @extend %container;
+
+    @include md-min {
+      display: grid;
+      gap: 2px;
+
+      grid-template-areas: "it1 it1 it3 it3 it4" "it2 it2 it3 it3 it4" "it5 it6 it6 it7 it7";
+      grid-template-columns: 1.5fr 0.5fr 1.5fr 0.5fr 2fr;
+    }
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    min-height: 198px;
+    padding: $gap $gap $gap $gap;
+
+    border: 1px solid $color-white;
+    background: $color-gray-bg;
+    @include md {
+      justify-content: flex-start;
+      min-height: 140px;
+    }
+
+    &:nth-child(1) {
+      grid-area: it1;
+      min-height: 57px;
+      border-radius: 12px 0 0 0;
+      @include md {
+        border-radius: 12px 12px 0 0;
+      }
+    }
+
+    &:nth-child(2) {
+      grid-area: it2;
+    }
+
+    &:nth-child(3) {
+      grid-area: it3;
+    }
+
+    &:nth-child(4) {
+      grid-area: it4;
+      @include md-min {
+        border-radius: 0 12px 0 0;
+      }
+    }
+
+    &:nth-child(5) {
+      grid-area: it5;
+      @include md-min {
+        border-radius: 0 0 0 12px;
+      }
+    }
+
+    &:nth-child(6) {
+      grid-area: it6;
+    }
+
+    &:nth-child(7) {
+      grid-area: it7;
+      border-radius: 0 0 12px 0;
+      @include md {
+        border-radius: 0 0 12px 12px;
+      }
+    }
+  }
+  &__title-main {
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    color: $color-accent;
+
+    font-weight: 700;
+    font-size: 14px;
+  }
+  &__title {
+    margin-bottom: 20px;
+
+    color: $color-primary-soft;
+
+    font-weight: 500;
+    font-size: 24px;
+    @include md {
+      font-size: 18px;
+    }
+  }
+  &__description {
+    color: $color-gray-text;
+
+    font-size: 18px;
+  }
+}
