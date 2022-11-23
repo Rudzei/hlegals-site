@@ -34,11 +34,32 @@
     margin-bottom: 40px;
   }
   &__page-link {
-  font-size: 14px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  color: $color-white;
-  opacity: 0.5;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    opacity: 0.5;
+    color: $color-white;
+
+    font-size: 14px;
+    font-weight: 500;
+    transition: 0.2s linear;
+    &::after {
+      position: absolute;
+      top: 4px;
+      bottom: 0;
+      max-height: 13px;
+      margin-left: 5px;
+      padding-right: $gap-sm;
+
+      content: "";
+      background-image: url(../img/arrow-gray.svg);
+      background-repeat: no-repeat;
+      @include md {
+        top: 4px;
+      }
+    }
+    &:hover {
+      color: $color-accent;
+    }
   }
   &__title {
     font-size: 42px;

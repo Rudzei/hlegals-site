@@ -27,6 +27,9 @@
         background-color: $color-accent;
         color: $color-white;
       }
+      &:hover {
+        background: $color-accent;
+      }
     }
   }
   &__locations {
@@ -36,17 +39,31 @@
     }
     &-link {
       color: inherit;
+      transition: 0.2s linear;
+    }
+    &:hover {
+      color: $color-accent;
     }
   }
   &__phones {
     &-link {
       font-weight: 700;
       color: inherit;
+      transition: 0.2s linear;
+    }
+    &:hover {
+      color: $color-accent;
     }
   }
   &__socials {
     @include sm {
       display: none;
+    }
+  }
+  &__socials-image {
+    transition: 0.2s linear;
+    &:hover {
+      fill: $color-accent;
     }
   }
 }

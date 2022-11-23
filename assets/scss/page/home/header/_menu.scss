@@ -102,5 +102,8 @@
   &__link {
     font-size: 18px;
     color: $color-white;
+    &:hover {
+      color: $color-accent;
+    }
   }
 }
