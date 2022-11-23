@@ -114,14 +114,4 @@ $size: 16px;
       display: none;
     }
   }
-  &__indicator {
-    width: $size;
-    height: $size;
-    border-radius: $size * 0.5;
-    opacity: 0.2;
-    background-color: $color-active;
-    &.active {
-      opacity: 1;
-    }
-  }
 }

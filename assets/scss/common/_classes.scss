@@ -1,6 +1,8 @@
 @use "../presets" as *;
 @use "../mixins" as *;
 
+$size: 16px;
+
 .container {
   width: min(100% - $gap * 2, $ul);
   margin-inline: auto;
@@ -8,4 +10,15 @@
 
 .visually-hidden {
   @include visually-hidden;
+}
+
+.indicator {
+  width: $size;
+  height: $size;
+  border-radius: $size * 0.5;
+  opacity: 0.2;
+  background-color: $color-active;
+  &.-active {
+    opacity: 1;
+  }
 }

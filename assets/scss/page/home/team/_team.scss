@@ -1,3 +1,113 @@
 @use "../../../presets" as *;
 @use "../../../mixins" as *;
 
+.team {
+  padding-top: 4px;
+  padding-bottom: $gap-xl;
+  @extend %container;
+
+  @include md {
+    padding-top: $gap-xl;
+  }
+  &__container {
+    display: flex;
+
+    border-radius: 12px;
+    background-color: $color-gray-bg;
+    gap: $gap-xl;
+  }
+  &__photo {
+    max-height: 500px;
+
+    @include md {
+      display: none;
+    }
+  }
+  &__image {
+    border-radius: 12px 0 0 12px;
+  }
+  &__content {
+    padding-top: $gap-lg;
+    padding-right: $gap;
+    @include md {
+      padding: $gap-md $gap $gap $gap;
+    }
+  }
+  &__page-link {
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: $color-active;
+
+    font-size: 14px;
+    font-weight: 700;
+    transition: 0.2s linear;
+    &::after {
+      position: relative;
+      top: 2px;
+
+      margin-left: 5px;
+      padding-right: $gap-sm;
+
+      content: "";
+      background-image: url(../img/arrow-blue.svg);
+      background-repeat: no-repeat;
+    }
+    &:hover {
+      color: $color-accent;
+    }
+  }
+  &__quote {
+    max-width: 830px;
+    padding-top: 5px;
+    @extend %text-liner-gradient2;
+
+    font-size: 42px;
+    font-weight: 700;
+
+    @include sm {
+      font-size: 32px;
+    }
+  }
+  &__wrap {
+    @include md {
+      display: flex;
+      align-items: center;
+
+      padding-top: $gap-sm;
+      gap: $gap-sm;
+    }
+  }
+  &__photo-min {
+    @include md-min {
+      display: none;
+    }
+  }
+  &__image-min {
+    border-radius: 120px;
+  }
+  &__author {
+    color: $color-gray-text;
+    font-weight: 500;
+    font-size: 18px;
+
+    @include lg-min {
+      padding-top: $gap;
+    }
+  }
+  &__job {
+    color: $color-gray-text;
+    font-weight: 400;
+    font-size: 16px;
+
+    padding-top: 5px;
+  }
+  &__indicators {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    padding-top: $gap;
+    @include md-min {
+      padding-top: $gap-md;
+    }
+  }
+}
