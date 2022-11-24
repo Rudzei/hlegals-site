@@ -5,13 +5,13 @@
   &__content {
     padding-top: $gap-xl;
 
-      column-count: auto;
-      column-gap: $gap-xl;
-      column-width: 413px;
-      @include sm {
-        padding-top: $gap;
-        padding-bottom: 110px;
-      }
+    column-count: auto;
+    column-gap: $gap-xl;
+    column-width: 413px;
+    @include sm {
+      padding-top: $gap;
+      padding-bottom: 110px;
+    }
   }
 }
 
@@ -24,22 +24,24 @@
 
     border-radius: 8px;
     background-color: $color-white;
+
     @include sm {
       margin-bottom: $gap;
 
       &:nth-child(4),
-        &:nth-child(5),
-          &:nth-child(6) {
+      &:nth-child(5),
+      &:nth-child(6) {
         display: none;
       }
     }
   }
   &__title {
-    font-weight: 500;
-    font-size: 18px;
-
     padding: $gap $gap 0 $gap;
+
     color: $color-active;
+
+    font-size: 18px;
+    font-weight: 500;
   }
 
   &__date {
@@ -50,8 +52,8 @@
 
     color: $color-gray-text;
 
-    font-weight: 700;
     font-size: 12px;
+    font-weight: 700;
   }
 
 
@@ -62,8 +64,8 @@
 
     border-top: 4px solid $color-gray-separator;
 
-    font-weight: 400;
     font-size: 16px;
+    font-weight: 400;
 
     @include lg {
       display: none;

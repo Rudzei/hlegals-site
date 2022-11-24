@@ -3,56 +3,68 @@
 
 .services {
   position: relative;
-  background: $color-gradient-supersoft;
-  border-radius: 0px 0px 12px 12px;
 
   margin-bottom: 60px;
+
+  border-radius: 0 0 12px 12px;
+  background: $color-gradient-supersoft;
+
+  @include xs {
+    margin-bottom: 40px;
+  }
   &:before {
-    content: "";
     position: absolute;
     top: 100%;
     right: 40px;
     left: 40px;
+
     height: 20px;
-    border-radius: 0px 0px 12px 12px;
+
+    content: "";
+
+    border-radius: 0 0 12px 12px;
     background-color: $color-gray-separator;
   }
   &:after {
-    content: "";
     position: absolute;
     top: 100%;
     right: 20px;
     left: 20px;
+
     height: 10px;
-    border-radius: 0px 0px 12px 12px;
+
+    content: "";
+
+    border-radius: 0 0 12px 12px;
     background-color: $color-gray-text;
   }
   &__container {
     @extend %container;
   }
-  @include xs {
-    margin-bottom: 40px;
-  }
   &__page-link {
+    transition: 0.2s linear;
     letter-spacing: 1px;
     text-transform: uppercase;
+
     opacity: 0.5;
     color: $color-white;
 
     font-size: 14px;
     font-weight: 700;
-    transition: 0.2s linear;
     &::after {
       position: absolute;
       top: 4px;
       bottom: 0;
+
       max-height: 13px;
       margin-left: 5px;
       padding-right: $gap-sm;
 
       content: "";
+
       background-image: url(../img/arrow-gray.svg);
       background-repeat: no-repeat;
+
       @include md {
         top: 4px;
       }
@@ -62,20 +74,22 @@
     }
   }
   &__title {
-    font-size: 42px;
-    @extend %text-liner-gradient2;
-
     margin-bottom: 68px;
-    @include sm {
-      font-size: 32px;
 
+    font-size: 42px;
+
+    @extend %text-liner-gradient2;
+    @include sm {
       margin-bottom: 20px;
+
+      font-size: 32px;
     }
   }
   &__grid {
     display: grid;
 
     padding-bottom: 76px;
+
     gap: 58px 54px;
     @include md-min {
       grid-template-columns: 1fr 1fr 1fr;

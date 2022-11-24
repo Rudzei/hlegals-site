@@ -1,0 +1,70 @@
+@use "../../../presets" as *;
+@use "../../../mixins" as *;
+
+.page-header {
+  &--alt {
+    background: none;
+    background-color: $color-primary;
+    &::after {
+      top: 100%;
+
+      content: "";
+
+      background: none;
+    }
+  }
+  &__grid {
+    @include md {
+      padding-top: $gap;
+
+      grid-template-areas: "act actions" "logo menu";
+    }
+  }
+  &__logo-image {
+    @include sm {
+      max-width: 200px;
+    }
+  }
+  &__actions {
+    @include md {
+      justify-content: space-between;
+
+      padding-bottom: 23px;
+    }
+  }
+}
+
+.actions {
+  &__locations {
+    @include md {
+      display: none;
+    }
+  }
+  &__social {
+    @include md {
+      display: none;
+    }
+  }
+}
+
+.menu {
+  &__btn {
+    @include md-min {
+      display: none;
+    }
+    @include sm-min {
+      display: block;
+    }
+  }
+  &__list {
+    @include md {
+      display: none;
+    }
+  }
+
+  &__link {
+    &.-active {
+      border-bottom: 2px solid $color-white;
+    }
+  }
+}

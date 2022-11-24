@@ -5,10 +5,11 @@
   background-color: $color-gray-bg;
 
   &__container {
-    @extend %container;
     position: relative;
 
     padding-top: 27px;
+
+    @extend %container;
     @include sm {
       padding-top: $gap-md;
     }
@@ -21,6 +22,7 @@
         left: 0;
 
         content: "";
+
         background: linear-gradient(180deg, #f5f5fa00 0%, #f5f5fa 86.5%);
       }
     }
@@ -39,6 +41,7 @@
       padding-right: $gap-sm;
 
       content: "";
+
       background-image: url(../img/arrow-blue.svg);
       background-repeat: no-repeat;
     }
@@ -49,10 +52,11 @@
   &__title {
     max-width: 415px;
     padding-top: 2px;
-    @extend %text-liner-gradient2;
 
-    font-weight: 700;
     font-size: 42px;
+    font-weight: 700;
+
+    @extend %text-liner-gradient2;
     @include md {
       font-size: 32px;
     }

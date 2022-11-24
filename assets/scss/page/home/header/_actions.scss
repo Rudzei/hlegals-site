@@ -3,29 +3,36 @@
 
 .actions {
   display: flex;
-  gap: $gap;
   align-items: center;
+
+  gap: $gap;
   @include sm-min {
-    color: $color-white;
     justify-content: flex-end;
+
+    color: $color-white;
   }
   @include sm {
-    color: $color-gray-text;
     justify-content: space-between;
+
+    color: $color-gray-text;
   }
   &__languages {
     display: flex;
     &-link {
-      font-weight: 700;
-      font-size: 12px;
-      letter-spacing: 1px;
-      color: inherit;
       display: block;
+
       padding: 5px;
+
+      letter-spacing: 1px;
+
+      color: inherit;
       border-radius: 8px;
+
+      font-size: 12px;
+      font-weight: 700;
       &.-active {
-        background-color: $color-accent;
         color: $color-white;
+        background-color: $color-accent;
       }
       &:hover {
         background: $color-accent;
@@ -34,12 +41,14 @@
   }
   &__locations {
     font-style: normal;
+
     @include sm {
       display: none;
     }
     &-link {
-      color: inherit;
       transition: 0.2s linear;
+
+      color: inherit;
     }
     &:hover {
       color: $color-accent;
@@ -47,9 +56,11 @@
   }
   &__phones {
     &-link {
-      font-weight: 700;
-      color: inherit;
       transition: 0.2s linear;
+
+      color: inherit;
+
+      font-weight: 700;
     }
     &:hover {
       color: $color-accent;

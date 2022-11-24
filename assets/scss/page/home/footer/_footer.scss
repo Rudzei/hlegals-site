@@ -4,8 +4,6 @@
 .page-footer {
   background: $color-gray-bg;
   &__container {
-    @extend %container;
-
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -15,6 +13,7 @@
 
     border-top: 4px solid $color-gray-separator;
 
+    @extend %container;
     gap: $gap;
     @include md {
       justify-content: center;
@@ -27,6 +26,7 @@
     color: $color-gray-text;
 
     font-weight: 500;
+
     @include sm {
       text-align: center;
     }

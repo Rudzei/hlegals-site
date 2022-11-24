@@ -1,0 +1,23 @@
+@use "../../../presets" as *;
+@use "../../../mixins" as *;
+
+.services {
+  &--alt {
+    padding-top: 170px;
+  }
+  &__page-link--alt {
+    &:after {
+      top: 16.8%;
+    }
+  }
+}
+
+.cases {
+  &--alt {
+    padding-top: 60px;
+
+    @include sm {
+      padding-top: $gap-xl;
+    }
+  }
+}

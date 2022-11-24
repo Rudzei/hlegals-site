@@ -1,0 +1,6 @@
+@use "../../../presets" as *;
+@use "../../../mixins" as *;
+
+.page-footer__container--alt {
+  border-top: none;
+}

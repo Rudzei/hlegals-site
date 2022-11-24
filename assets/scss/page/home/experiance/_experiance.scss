@@ -3,6 +3,7 @@
 
 .experiance {
   background-color: $color-primary;
+
   @include md-min {
     padding-top: 80px;
     padding-bottom: 80px;

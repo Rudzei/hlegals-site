@@ -4,41 +4,48 @@
 .services-item {
   &__content {
     display: flex;
+
     @include xs-min {
       flex-direction: column;
 
       margin-bottom: 15px;
+
       gap: $gap;
     }
     @include xs {
       align-items: center;
 
       margin-bottom: 10px;
+
       gap: $gap-sm;
     }
   }
   &__image {
     width: 92px;
     height: 92px;
+
     @include xs {
       width: 64px;
       height: 64px;
     }
   }
   &__title {
-    font-weight: 500;
-    font-size: 24px;
     order: 1;
 
     color: $color-active;
+
+    font-size: 24px;
+    font-weight: 500;
+
     @include xs {
       font-size: 18px;
     }
   }
   &__description {
+    color: $color-white;
+
     font-size: 18px;
 
-    color: $color-white;
     @include sm {
       font-size: 16px;
     }

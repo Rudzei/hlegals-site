@@ -1,10 +1,10 @@
 @use "../presets" as *;
 @use "../mixins" as *;
-
 $size: 16px;
 
 .container {
   width: min(100% - $gap * 2, $ul);
+
   margin-inline: auto;
 }
 
@@ -12,8 +12,8 @@ $size: 16px;
   position: absolute;
   z-index: 1;
   right: 50%;
-  left: 50%;
   bottom: $gap-xl;
+  left: 50%;
 
   min-width: 250px;
   min-height: 50px;
@@ -45,8 +45,9 @@ $size: 16px;
 .indicator {
   width: $size;
   height: $size;
-  border-radius: $size * 0.5;
+
   opacity: 0.2;
+  border-radius: $size * 0.5;
   background-color: $color-active;
   &.-active {
     opacity: 1;

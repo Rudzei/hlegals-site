@@ -4,8 +4,8 @@
 .team {
   padding-top: 4px;
   padding-bottom: $gap-xl;
-  @extend %container;
 
+  @extend %container;
   @include md {
     padding-top: $gap-xl;
   }
@@ -14,6 +14,7 @@
 
     border-radius: 12px;
     background-color: $color-gray-bg;
+
     gap: $gap-xl;
   }
   &__photo {
@@ -29,6 +30,7 @@
   &__content {
     padding-top: $gap-lg;
     padding-right: $gap;
+
     @include md {
       padding: $gap-md $gap $gap $gap;
     }
@@ -47,6 +49,7 @@
       padding-right: $gap-sm;
 
       content: "";
+
       background-image: url(../img/arrow-blue.svg);
       background-repeat: no-repeat;
     }
@@ -57,11 +60,11 @@
   &__quote {
     max-width: 830px;
     padding-top: 5px;
-    @extend %text-liner-gradient2;
 
     font-size: 42px;
     font-weight: 700;
 
+    @extend %text-liner-gradient2;
     @include sm {
       font-size: 32px;
     }
@@ -72,6 +75,7 @@
       align-items: center;
 
       padding-top: $gap-sm;
+
       gap: $gap-sm;
     }
   }
@@ -85,25 +89,29 @@
   }
   &__author {
     color: $color-gray-text;
-    font-weight: 500;
+
     font-size: 18px;
+    font-weight: 500;
 
     @include lg-min {
       padding-top: $gap;
     }
   }
   &__job {
-    color: $color-gray-text;
-    font-weight: 400;
-    font-size: 16px;
-
     padding-top: 5px;
+
+    color: $color-gray-text;
+
+    font-size: 16px;
+    font-weight: 400;
   }
   &__indicators {
     display: flex;
     justify-content: center;
-    gap: 14px;
+
     padding-top: $gap;
+
+    gap: 14px;
     @include md-min {
       padding-top: $gap-md;
     }
