@@ -1,3 +1,21 @@
 @use "../../../presets" as *;
 @use "../../../mixins" as *;
 
+.clients {
+  &__container {
+    @extend %container;
+    padding-top: 32px;
+  }
+  &__title {
+    padding-bottom: $gap-lg;
+
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    color: $color-primary;
+
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
