@@ -1,0 +1,34 @@
+@use "../../../presets" as *;
+@use "../../../mixins" as *;
+
+.page-footer {
+  background: $color-gray-bg;
+  &__container {
+    @extend %container;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    padding-top: 28px;
+    padding-bottom: 40px;
+
+    border-top: 4px solid $color-gray-separator;
+
+    gap: $gap;
+    @include md {
+      justify-content: center;
+
+      padding-top: 20px;
+      padding-bottom: 120px;
+    }
+  }
+  &__copyright {
+    color: $color-gray-text;
+
+    font-weight: 500;
+    @include sm {
+      text-align: center;
+    }
+  }
+}

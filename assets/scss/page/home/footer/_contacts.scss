@@ -1,0 +1,82 @@
+@use "../../../presets" as *;
+@use "../../../mixins" as *;
+
+.contacts {
+  &__locations {
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 20px;
+
+    font-style: normal;
+
+    gap: 25px;
+    @include xs {
+      flex-direction: column;
+      justify-content: center;
+
+      gap: $gap-sm;
+    }
+  }
+  &__locations-adress {
+    color: $color-primary;
+
+    font-weight: 500;
+  }
+  &__locations-text {
+    @include sm {
+      font-weight: 700;
+    }
+  }
+  &__locations-link {
+    transition: 0.2s linear;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    color: $color-active;
+
+    font-weight: 700;
+    font-size: 12px;
+    &:hover {
+      color: $color-accent;
+    }
+  }
+  &__info {
+    display: flex;
+    align-items: center;
+
+    gap: 25px;
+    @include xs {
+      flex-direction: column;
+      justify-content: center;
+
+      gap: 20px;
+    }
+  }
+  &__social-img {
+    transition: 0.2s linear;
+    &:hover {
+      fill: $color-accent;
+    }
+  }
+  &__phones-link {
+    transition: 0.2s linear;
+
+    color: $color-primary-alt;
+
+    font-weight: 700;
+    &:hover {
+      color: $color-accent;
+    }
+  }
+  &__email-link {
+    transition: 0.2s linear;
+
+    color: $color-active;
+
+    font-weight: 700;
+    &:hover {
+      color: $color-accent;
+    }
+  }
+}
