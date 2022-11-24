@@ -1,0 +1,60 @@
+@use "../../../presets" as *;
+@use "../../../mixins" as *;
+
+.publications {
+  background-color: $color-gray-bg;
+
+  &__container {
+    @extend %container;
+    position: relative;
+
+    padding-top: 27px;
+    @include sm {
+      padding-top: $gap-md;
+    }
+    &:after {
+      @include sm-min {
+        position: absolute;
+        top: 60%;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        content: "";
+        background: linear-gradient(180deg, #f5f5fa00 0%, #f5f5fa 86.5%);
+      }
+    }
+  }
+  &__page-link {
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    font-size: 14px;
+    font-weight: 700;
+    &::after {
+      position: relative;
+      top: 2px;
+
+      margin-left: 5px;
+      padding-right: $gap-sm;
+
+      content: "";
+      background-image: url(../img/arrow-blue.svg);
+      background-repeat: no-repeat;
+    }
+    &:hover {
+      color: $color-accent;
+    }
+  }
+  &__title {
+    max-width: 415px;
+    padding-top: 2px;
+    @extend %text-liner-gradient2;
+
+    font-weight: 700;
+    font-size: 42px;
+    @include md {
+      font-size: 32px;
+    }
+  }
+}

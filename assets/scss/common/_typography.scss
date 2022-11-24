@@ -33,6 +33,11 @@ body {
 }
 
 a {
+  transition: 0.3s linear;
   text-decoration: none;
+
   color: $color-active;
+  &:hover {
+    color: $color-accent;
+  }
 }

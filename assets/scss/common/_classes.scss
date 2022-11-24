@@ -8,6 +8,36 @@ $size: 16px;
   margin-inline: auto;
 }
 
+.btn {
+  position: absolute;
+  z-index: 1;
+  right: 50%;
+  left: 50%;
+  bottom: $gap-xl;
+
+  min-width: 250px;
+  min-height: 50px;
+
+  cursor: pointer;
+  transition: 0.3s linear;
+  transform: translateX(-50%);
+  text-align: center;
+
+  color: $color-white;
+  border: none;
+  border-radius: 12px;
+  background: $color-active;
+  box-shadow: 0 0 $gap #24a3ff80;
+
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 17px;
+
+  &:hover {
+    background: $color-active-hover;
+  }
+}
+
 .visually-hidden {
   @include visually-hidden;
 }

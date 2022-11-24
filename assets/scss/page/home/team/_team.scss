@@ -36,11 +36,9 @@
   &__page-link {
     letter-spacing: 1px;
     text-transform: uppercase;
-    color: $color-active;
 
     font-size: 14px;
     font-weight: 700;
-    transition: 0.2s linear;
     &::after {
       position: relative;
       top: 2px;
